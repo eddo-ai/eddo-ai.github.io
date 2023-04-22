@@ -1,24 +1,4 @@
 .container {
-    max-width: 800px;
     margin: 0 auto;
     padding: 1rem;
-}
-
-.video-placeholder {
-    width: 100%;
-    padding-top: 56.25%; /* 16:9 Aspect Ratio */
-    position: relative;
-    background-color: #f0f0f0;
-    text-align: center;
-}
-
-.video-placeholder p {
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    margin: auto;
-    font-size: 24px;
-    color: #888;
 }
