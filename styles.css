@@ -4,7 +4,30 @@ body {
     color: #333;
     margin: 0;
     background-image: linear-gradient(135deg, #6A3E9A 0%, #28A6A5 100%);
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: 'Roboto', sans-serif;
+}
+
+h1, h2, h3, nav ul li a {
+    font-family: 'Special Elite', cursive;
+}
+
+/* Add smooth scrolling animation */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Add hover effect to navigation links */
+nav ul li a:hover {
+    background-color: #6A3E9A;
+    color: #fff;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Add hover effect to button */
+button:hover {
+    background-color: #6A3E9A;
+    color: #fff;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .container {
