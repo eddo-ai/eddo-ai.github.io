@@ -1,91 +1,165 @@
-/* styles.css */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
 
 body {
+    font-family: 'Lato', sans-serif;
     color: #333;
-    margin: 0;
-    background-image: linear-gradient(135deg, #6A3E9A 0%, #28A6A5 100%);
-    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    font-size: 16px;
+    background: linear-gradient(to right, skyblue, #b0e0e6);
 }
 
-h1, h2, h3, nav ul li a {
-    font-family: 'Special Elite', cursive;
+h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #333;
 }
 
-/* Add smooth scrolling animation */
+h2 {
+    font-size: 2rem;
+    font-weight: 400;
+    color: #555;
+    margin: 1rem 0;
+}
+
+p {
+    font-size: 1.1rem;
+    color: #777;
+    margin: 1rem 0;
+    line-height: 1.8;
+}
+
+.wave {
+    font-size: 2.5rem;
+    display: inline-block;
+    animation: bounce 1s infinite;
+}
+
 html {
     scroll-behavior: smooth;
 }
 
-/* Add hover effect to navigation links */
-nav ul li a:hover {
-    background-color: #6A3E9A;
-    color: #fff;
-    transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-/* Add hover effect to button */
-button:hover {
-    background-color: #6A3E9A;
-    color: #fff;
-    transition: background-color 0.3s ease, color 0.3s ease;
-}
-
 .container {
     max-width: 1200px;
-    margin: 0 auto;
-    padding: 1rem;
+    margin: 0;
+    padding: 5rem;
 }
 
-/* Hero section */
-#hero {
-    padding: 40px;
-    text-align: center;
-    background-color: #fff;
-    border-radius: 10px;
-    max-width: 80em;
-    margin: 0 auto;
-}
-
-#hero h2 {
-    font-size: 2rem;
-    font-weight: 700;
-    color: #6A3E9A;
-    font-family: 'Special Elite', cursive;
-}
-
-/* New styles for the demo video section */
-#demo-video {
-    padding: 2rem;
-    text-align: center;
-    background-color: rgba(255, 255, 255, 0.7);
-    border-radius: 10px;
-    margin: 2rem 0;
-}
-
-.video-container {
-    max-width: 1280px;
-    margin: 0 auto;
-}
-
-/* Responsive styles for the video container */
 @media (max-width: 768px) {
-    .video-container {
-        max-width: 100%;
+    .container {
+        padding: 1;
+    }
+
+    button {
+        margin: 1rem 0;
     }
 }
 
-h1 {
-    font-size: 4rem;
+.feature-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 1rem;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+}
+
+.feature {
+    flex: 1;
+    padding: 1.5rem;
+    text-align: left;
+    line-height: 1.3rem;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 0.5rem;
+}
+
+button {
+    background-color: transparent;
+    font-weight: 700;
+    font-size: 1.25rem;
+    padding: 0.75rem 1.5rem;
+    border-radius: 30px;
+    cursor: pointer;
+    margin: 2rem 0;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    letter-spacing: 0.5px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#hero {
+    text-align: center;
+    padding: 2rem;
+}
+
+#hero h1 {
+    font-size: 2.5rem;
+    color: #333;
+}
+
+#hero h2 {
+    font-size: 1.8rem;
+    color: #555;
     font-weight: bold;
-    font-family: 'Special Elite', cursive;
+}
+
+#hero p {
+    font-size: 1.2rem;
+    color: #777;
+}
+
+.wave {
+    font-size: 2rem;
+    display: inline-block;
+    animation: bounce 1s infinite;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    
+    40% {
+        transform: translateY(-10px);
+    }
+    
+    60% {
+        transform: translateY(-5px);
+    }
+}
+
+#hero-image-container {
+    text-align: center; /* Centering the image horizontally */
+    margin: 2rem auto; /* Adding vertical margin and auto horizontal margin to center */
+}
+
+#hero-image-container img {
+    width: 80%; /* Reducing the width to 80% of the container */
+    max-width: 80%; /* Ensuring the image does not exceed 80% of the container's width */
+    transition: transform 2s;
+    transform: scale(1);
+    overflow: hidden;
+    border-radius: 10px;
+    display: block; /* Making the image a block-level element */
+    margin: 0 auto; /* Centering the image horizontally within its container */
+}
+
+#hero-image-container img:hover {
+    transform: scale(1.1);
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
 }
 
 h2 {
-    font-family: 'Special Elite', cursive;
+    font-size: 1.5rem;
     color: #0000009a;
     margin-bottom: 20px;
 }
-
 
 header {
     color: #000000;
@@ -110,7 +184,6 @@ nav ul li a {
     color: #fff;
     text-decoration: none;
     padding: 0.25rem 0.5rem;
-    font-family: 'Special Elite', cursive;
 }
 
 nav ul li a:hover {
@@ -118,31 +191,6 @@ nav ul li a:hover {
     border-radius: 3px;
 }
 
-.feature-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1rem;
-    padding: 1rem;
-    background-color: rgba(255, 255, 255, 0.3);
-    border-radius: 10px;
-}
-
-.feature {
-    flex: 1;
-    padding: 1.5rem;
-    text-align: left;
-    line-height: 1.3rem;
-    background-color: rgba(255, 255, 255, 0.9);
-    border-radius: 5px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.feature h3 {
-    font-family: 'Special Elite', cursive;
-}
-
-/* Responsive grids */
 @media (max-width: 768px) {
     .feature {
         flex-basis: calc(50% - 2rem);
@@ -155,41 +203,7 @@ nav ul li a:hover {
     }
 }
 
-button {
-    background-color: transparent;
-    color: #6A3E9A;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 700;
-    font-size: 1.25rem;
-    padding: 0.75rem 1.5rem;
-    border: 2px solid #6A3E9A;
-    border-radius: 30px;
-    cursor: pointer;
-    margin: 2rem 0;
-    transition: background-color 0.3s ease, color 0.3s ease;
-    letter-spacing: 0.5px;
-    /* center button */
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-
-}
-
-button:hover {
-    background-color: #6A3E9A;
-    color: #fff;
-}
-
 /* Footer */
-footer {
-    text-align: center;
-    color: #fff;
-    font-size: 1.25rem;
-    padding: 1rem 0;
-    background-color: rgba(106, 62, 154, 0.8);
-    border-radius: 10px;
-    margin-top: 2rem;
-}
 
 footer {
     font-size: 1rem;
